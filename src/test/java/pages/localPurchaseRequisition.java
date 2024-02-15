@@ -94,7 +94,6 @@ public class localPurchaseRequisition {
         Select purchaseTypeSelect = new Select(purchase_typeSelect);
         purchaseTypeSelect.selectByVisibleText("New Purchase");
         Thread.sleep(2000);
-//        End purchaseTypeSelect selection
         approveBySelect.get(1).click();
 //        approveBySelect.get(1).sendKeys(Keys.ARROW_DOWN);
         approveBySelect.get(1).sendKeys(Keys.ENTER);
