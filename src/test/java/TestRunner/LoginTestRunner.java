@@ -1,7 +1,7 @@
 package TestRunner;
 import config.setupPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -19,8 +19,8 @@ public class LoginTestRunner extends setupPage {
 
     }
 
-    public void doLogout(){
-
-
-    }
+//    public void doLogout(){
+//
+//
+//    }
 }

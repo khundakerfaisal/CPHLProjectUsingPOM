@@ -1,25 +1,20 @@
 package pages;
-
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
-import javax.xml.xpath.XPath;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class localPurchaseRequisition {
 
-    @FindBy(xpath = "//button[@title='Home Menu']")
+    @FindBy(xpath = "//button[@title=\"Home Menu\"]")
     WebElement btnHomeMenu;
-
-    @FindBy(xpath = "//a[@data-menu-xmlid='purchase.menu_purchase_root']")
-    WebElement btnPrMenu;
-
+    @FindBy(className = "dropdown-item")
+    List<WebElement> btnPrMenu;
     @FindBy(xpath = "//button[@data-original-title='Create record']")
     WebElement btnPrCreate;
     @FindBy(className = "o_input_dropdown")
@@ -33,26 +28,33 @@ public class localPurchaseRequisition {
 
     @FindBy(xpath = "//select[@name='priority']")
     WebElement prioritySelect;
-//
-//    @FindBy(css = "ul.ui-menu li.ui-menu-item a.dropdown-item.ui-menu-item-wrapper")
-//    List<WebElement> dropdownOptions;
+
+    @FindBy(name = "requirement_for")
+    WebElement requirement_forSelect;
 
 
 
+    @FindBy(name = "requisition_type")
+    WebElement requirementTypeSelect;
+    @FindBy(name = "purchase_type")
+    WebElement purchase_typeSelect;
+//    @FindBy(name = "assigned_to")
+//    WebElement approveBySelect;
+    @FindBy(className = "ui-autocomplete-input")
+    List<WebElement> approveBySelect;
+//    @FindBy(className = "ui-menu-item")
+//    List<WebElement> approverOptionSelect;
 
-
-
-    
     public localPurchaseRequisition(WebDriver driver){
         PageFactory.initElements(driver,this);
 
     }
 
     public void localPr() throws InterruptedException {
-        //        procurement Root Menu selection
+
         btnHomeMenu.click();
-        Thread.sleep(1000);
-        btnPrMenu.click();
+
+        btnPrMenu.get(5).click();
         Thread.sleep(1000);
         btnPrCreate.click();
         Thread.sleep(1000);
@@ -74,10 +76,30 @@ public class localPurchaseRequisition {
         //        End date selection
         //        Priority selection
         prioritySelect.click();
-        Select select = new Select(prioritySelect);
-        select.selectByVisibleText("High");
+        Select prioritySelection = new Select(prioritySelect);
+        prioritySelection.selectByVisibleText("High");
         Thread.sleep(2000);
         //        End priority selection
+        requirement_forSelect.click();
+        Select requirementSelect = new Select(requirement_forSelect);
+        requirementSelect.selectByVisibleText("Operation");
+        Thread.sleep(2000);
+//        End Requirement for selection
+        requirementTypeSelect.click();
+        Select requisitionSelect = new Select(requirementTypeSelect);
+        requisitionSelect.selectByVisibleText("Local");
+        Thread.sleep(2000);
+//        End requirementTypeSelect selection
+        purchase_typeSelect.click();
+        Select purchaseTypeSelect = new Select(purchase_typeSelect);
+        purchaseTypeSelect.selectByVisibleText("New Purchase");
+        Thread.sleep(2000);
+//        End purchaseTypeSelect selection
+        approveBySelect.get(1).click();
+//        approveBySelect.get(1).sendKeys(Keys.ARROW_DOWN);
+        approveBySelect.get(1).sendKeys(Keys.ENTER);
+
+        Thread.sleep(2000);
 
     }
 }

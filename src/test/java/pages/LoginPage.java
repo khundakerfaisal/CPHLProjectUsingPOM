@@ -25,17 +25,17 @@ public class LoginPage {
     }
 
     public void doLogin (String username,String password){
-        dbSelectLevel.get(2).click();
+//        dbSelectLevel.get(2).click();
         txtUserName.sendKeys(username);
         txtPassword.sendKeys(password);
         btnLogin.click();
 
     }
 
-    public void doLogout(){
-
-
-
-    }
+//    public void doLogout(){
+//
+//
+//
+//    }
 
 }
