@@ -2,6 +2,7 @@ package TestRunner;
 
 import config.setupPage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -22,7 +23,11 @@ public class localPrTestRunner extends setupPage {
 
     public void localPr() throws InterruptedException {
         localPurchaseRequisition localPurchaseRequisition=new localPurchaseRequisition(driver);
-        localPurchaseRequisition.localPr();
+        localPurchaseRequisition.localPr(driver);
+        String textActual=driver.findElements(By.className("btn-primary")).get(2).getText();
+        String textExpected="Request for Quotations";
+        Assert.assertTrue(textActual.contains(textExpected));
+
 
     }
 }

@@ -1,4 +1,6 @@
 package pages;
+import approval.localPrApproval;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class localPurchaseRequisition {
+public class localPurchaseRequisition  {
 
     @FindBy(xpath = "//button[@title=\"Home Menu\"]")
     WebElement btnHomeMenu;
@@ -42,15 +44,34 @@ public class localPurchaseRequisition {
 //    WebElement approveBySelect;
     @FindBy(className = "ui-autocomplete-input")
     List<WebElement> approveBySelect;
-//    @FindBy(className = "ui-menu-item")
-//    List<WebElement> approverOptionSelect;
+
+
+    @FindBy(xpath = "//a[text()='Add a line']")
+    WebElement productLineSelection;
+
+
+    @FindBy(className = "o_input_dropdown")
+    List<WebElement> productDropdownSelection;
+
+    @FindBy(xpath = "//a[contains(text(), '1 Gang 1 -Way Switch')]")
+    WebElement productDropdownValueSelection;
+
+    @FindBy(xpath = "//input[@name='product_qty']")
+    WebElement productQtyAdding;
+
+    @FindBy(xpath = "//button[text()='Ok']")
+    WebElement pressOkButton;
+
+    @FindBy(xpath = "//a[contains(text(), '1 Gang Switch')]")
+    WebElement productDropdown2ndValueSelection;
+
 
     public localPurchaseRequisition(WebDriver driver){
         PageFactory.initElements(driver,this);
 
     }
 
-    public void localPr() throws InterruptedException {
+    public void localPr(WebDriver driver) throws InterruptedException {
 
         btnHomeMenu.click();
 
@@ -78,27 +99,66 @@ public class localPurchaseRequisition {
         prioritySelect.click();
         Select prioritySelection = new Select(prioritySelect);
         prioritySelection.selectByVisibleText("High");
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
         //        End priority selection
         requirement_forSelect.click();
         Select requirementSelect = new Select(requirement_forSelect);
         requirementSelect.selectByVisibleText("Operation");
-        Thread.sleep(2000);
+//        Thread.sleep(1000);
 //        End Requirement for selection
         requirementTypeSelect.click();
         Select requisitionSelect = new Select(requirementTypeSelect);
         requisitionSelect.selectByVisibleText("Local");
-        Thread.sleep(2000);
+//        Thread.sleep(1000);
 //        End requirementTypeSelect selection
         purchase_typeSelect.click();
         Select purchaseTypeSelect = new Select(purchase_typeSelect);
         purchaseTypeSelect.selectByVisibleText("New Purchase");
-        Thread.sleep(2000);
+//        Thread.sleep(1000);
         approveBySelect.get(1).click();
 //        approveBySelect.get(1).sendKeys(Keys.ARROW_DOWN);
         approveBySelect.get(1).sendKeys(Keys.ENTER);
 
+        Thread.sleep(1000);
+        productLineSelection.click();
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+
+// Scroll the element into view using JavaScript
+        executor.executeScript("arguments[0].scrollIntoView(true);", productLineSelection);
+
+        productDropdownSelection.get(9).click();
+        Thread.sleep(1000);
+
+       productDropdownValueSelection.click();
         Thread.sleep(2000);
+//        dropdownBudgetSelection.get(2).click();
+        productQtyAdding.clear();
+        productQtyAdding.sendKeys("5");
+
+        // Click the "Ok" button
+        pressOkButton.click();
+        Thread.sleep(2000);
+        JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+
+// Scroll the element into view using JavaScript
+        executor1.executeScript("arguments[0].scrollIntoView(true);", productLineSelection);
+//        productQtyAdding.sendKeys(Keys.ENTER);
+        productLineSelection.click();
+        Thread.sleep(2000);
+        productDropdownSelection.get(9).click();
+        Thread.sleep(1000);
+
+        productDropdown2ndValueSelection.click();
+        Thread.sleep(2000);
+        productQtyAdding.clear();
+        productQtyAdding.sendKeys("3");
+        pressOkButton.click();
+        localPrApproval localpr=new localPrApproval(driver);
+        localpr.LocalPrApprovalState();
+        System.out.println("Local Purchase requsition Successfully Created!");
+
+
+
 
     }
 }

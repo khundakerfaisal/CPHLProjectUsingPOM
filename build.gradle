@@ -20,3 +20,22 @@ dependencies {
 
 }
 
+test {
+    useTestNG() {
+        if (project.hasProperty("username") && project.hasProperty("password")) {
+            systemProperties.put("username", project.property("username"))
+            systemProperties.put("password", project.property("password"))
+            print(project.property("username"))
+            print(project.property("password"))
+        }
+//        if(project.hasProperty("suiteName")){
+//            systemProperties.put("suiteName",project.property("suiteName"))
+//
+//            print(project.property("suiteName"))
+//
+//        }
+//        suites "./src/test/resources/smoke/"+systemProperties.get("suiteName")
+//        suites "./src/test/resources/regression/"+systemProperties.get("suiteName")
+
+    }
+}
