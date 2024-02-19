@@ -4,14 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class localPrApproval {
+public class sitePrApproval {
     private WebDriver driver;
-    public localPrApproval(WebDriver driver) {
+    public sitePrApproval(WebDriver driver) {
 
         this.driver = driver;
     }
-
-    public void LocalPrApprovalState()throws InterruptedException {
+    public void sitePrApprovalState()throws InterruptedException {
         // Pr Save button Pressed
         WebElement prSubmit = driver.findElement(By.xpath("//button[@title='Save record']"));
         prSubmit.click();
@@ -20,35 +19,33 @@ public class localPrApproval {
         WebElement PrStoreHodApproval = driver.findElement(By.xpath("//button[@name='button_store_hod_approve']"));
         PrStoreHodApproval.click();
         Thread.sleep(1000);
-        // Pr Hod Approval button Pressed
+
+        // Site Pr Hod Approval button Pressed
         WebElement PrHodApproval = driver.findElement(By.xpath("//button[@name='button_hod_approve']"));
         PrHodApproval.click();
         Thread.sleep(1000);
 
-        // Pr pm Approval button Pressed
+        // Site Pr pm Approval button Pressed
         WebElement PrPmApproval = driver.findElement(By.xpath("//button[@name='button_pm_approve']"));
         PrPmApproval.click();
         Thread.sleep(1000);
 
-        // Pr pm Ops Approval button Pressed
-        WebElement PrPmOpsApproval = driver.findElement(By.xpath("//button[@name='button_pm_ops_approve']"));
+        // Site Pr pm Ops Approval button Pressed
+        WebElement PrPmOpsApproval = driver.findElement(By.xpath("//button[@name='button_pm_ops_forward']"));
         PrPmOpsApproval.click();
         Thread.sleep(1000);
 
-        // Pr SCM Approval button Pressed
-        WebElement PrScmApproval = driver.findElement(By.xpath("//button[@name='button_scm_approve']"));
+        // Site Pr Forward Approval button Pressed
+        WebElement PrScmApproval = driver.findElement(By.xpath("//button[@name='button_forward']"));
         PrScmApproval.click();
         Thread.sleep(1000);
 
-        // Pr COO Approval button Pressed
-        WebElement PrCooApproval = driver.findElement(By.xpath("//button[@name='button_coo_approved']"));
+        // Site Pr Done Approval button Pressed
+        WebElement PrCooApproval = driver.findElement(By.xpath("//button[@name='button_done']"));
         PrCooApproval.click();
         Thread.sleep(1000);
 
-        // Pr Final/Done Approval button Pressed
-        WebElement PrFinalApproval = driver.findElement(By.xpath("//button[@name='button_done']"));
-        PrFinalApproval.click();
-        Thread.sleep(3000);
 
     }
+
 }

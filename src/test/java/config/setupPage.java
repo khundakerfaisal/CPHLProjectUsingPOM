@@ -14,6 +14,7 @@ public class setupPage {
     @BeforeTest
     public void startBrowser() {
         driver=new FirefoxDriver();
+//        driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.get("http://10.10.14.196:9091/web/login");

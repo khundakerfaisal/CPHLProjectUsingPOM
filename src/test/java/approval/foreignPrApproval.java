@@ -4,14 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class localPrApproval {
+public class foreignPrApproval {
     private WebDriver driver;
-    public localPrApproval(WebDriver driver) {
-
+    public foreignPrApproval(WebDriver driver){
         this.driver = driver;
-    }
 
-    public void LocalPrApprovalState()throws InterruptedException {
+
+    }
+    public void foreignPrApprovalState()throws InterruptedException {
         // Pr Save button Pressed
         WebElement prSubmit = driver.findElement(By.xpath("//button[@title='Save record']"));
         prSubmit.click();
@@ -20,6 +20,7 @@ public class localPrApproval {
         WebElement PrStoreHodApproval = driver.findElement(By.xpath("//button[@name='button_store_hod_approve']"));
         PrStoreHodApproval.click();
         Thread.sleep(1000);
+
         // Pr Hod Approval button Pressed
         WebElement PrHodApproval = driver.findElement(By.xpath("//button[@name='button_hod_approve']"));
         PrHodApproval.click();
@@ -49,6 +50,7 @@ public class localPrApproval {
         WebElement PrFinalApproval = driver.findElement(By.xpath("//button[@name='button_done']"));
         PrFinalApproval.click();
         Thread.sleep(3000);
+
 
     }
 }
