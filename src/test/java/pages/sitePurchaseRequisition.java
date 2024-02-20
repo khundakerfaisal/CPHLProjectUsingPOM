@@ -157,7 +157,7 @@ public class sitePurchaseRequisition {
         pressOkButton.click();
         sitePrApproval sitepr=new sitePrApproval(driver);
         sitepr.sitePrApprovalState();
-        System.out.println("Site Purchase requsition Successfully Created!");
+        System.out.println("Site Purchase requisition Successfully Created!");
 
 
 

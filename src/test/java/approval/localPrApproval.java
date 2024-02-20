@@ -48,7 +48,7 @@ public class localPrApproval {
         // Pr Final/Done Approval button Pressed
         WebElement PrFinalApproval = driver.findElement(By.xpath("//button[@name='button_done']"));
         PrFinalApproval.click();
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
     }
 }

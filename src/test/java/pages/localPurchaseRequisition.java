@@ -155,7 +155,7 @@ public class localPurchaseRequisition  {
         pressOkButton.click();
         localPrApproval localpr=new localPrApproval(driver);
         localpr.LocalPrApprovalState();
-        System.out.println("Local Purchase requsition Successfully Created!");
+        System.out.println("Local Purchase requisition Successfully Created!");
 
 
 
