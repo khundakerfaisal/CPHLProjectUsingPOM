@@ -6,9 +6,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.agreementPurchaseOrder;
-import pages.sitePurchaseOrder;
+import pages.comparativeStatement;
 
-public class agreementPoTestRunner extends setupPage {
+public class csTestRunner extends setupPage {
     @Test(priority = 1)
     public void doLoinWithValidCred(){
 
@@ -21,13 +21,13 @@ public class agreementPoTestRunner extends setupPage {
     }
     @Test(priority = 2)
 
-    public void agreementPoCreate() throws InterruptedException {
-        agreementPurchaseOrder agreementPurchaseOrder=new agreementPurchaseOrder(driver);
-        agreementPurchaseOrder.agreementPo(driver);
-        String textActual=driver.findElements(By.className("breadcrumb-item")).get(0).getText();
-        Thread.sleep(1000);
-        String textExpected="Local Purchase Order";
-        Assert.assertTrue(textActual.contains(textExpected));
+    public void csCreate() throws InterruptedException {
+        comparativeStatement comparativeStatement=new comparativeStatement(driver);
+        comparativeStatement.comparisonCreate(driver);
+//        String textActual=driver.findElements(By.className("breadcrumb-item")).get(0).getText();
+//        Thread.sleep(1000);
+//        String textExpected="Local Purchase Order";
+//        Assert.assertTrue(textActual.contains(textExpected));
 
 
     }

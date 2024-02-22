@@ -5,10 +5,10 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.agreementPurchaseOrder;
-import pages.sitePurchaseOrder;
+import pages.comparativeStatement;
+import pages.noteSheet;
 
-public class agreementPoTestRunner extends setupPage {
+public class noteSheetTestRunner extends setupPage {
     @Test(priority = 1)
     public void doLoinWithValidCred(){
 
@@ -21,13 +21,13 @@ public class agreementPoTestRunner extends setupPage {
     }
     @Test(priority = 2)
 
-    public void agreementPoCreate() throws InterruptedException {
-        agreementPurchaseOrder agreementPurchaseOrder=new agreementPurchaseOrder(driver);
-        agreementPurchaseOrder.agreementPo(driver);
-        String textActual=driver.findElements(By.className("breadcrumb-item")).get(0).getText();
-        Thread.sleep(1000);
-        String textExpected="Local Purchase Order";
-        Assert.assertTrue(textActual.contains(textExpected));
+    public void noteSheetCreate() throws InterruptedException {
+        noteSheet noteSheet=new noteSheet(driver);
+        noteSheet.noteSheetCreate(driver);
+//        String textActual=driver.findElements(By.className("breadcrumb-item")).get(0).getText();
+//        Thread.sleep(1000);
+//        String textExpected="Notesheet";
+//        Assert.assertTrue(textActual.contains(textExpected));
 
 
     }

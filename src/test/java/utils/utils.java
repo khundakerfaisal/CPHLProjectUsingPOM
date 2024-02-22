@@ -11,7 +11,7 @@ public class utils {
     public static void scrollPage(WebDriver driver){
 //        WebElement genderRadio = driver.findElement(By.xpath("//input[@type=\"radio\"]"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,650)");
+        js.executeScript("window.scrollBy(0,1200)");
 
     }
 

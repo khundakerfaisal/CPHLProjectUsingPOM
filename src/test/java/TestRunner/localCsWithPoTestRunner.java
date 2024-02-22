@@ -5,10 +5,10 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.agreementPurchaseOrder;
-import pages.sitePurchaseOrder;
+import pages.comparativeStatement;
+import pages.localCsWithPurhaseOrder;
 
-public class agreementPoTestRunner extends setupPage {
+public class localCsWithPoTestRunner extends setupPage {
     @Test(priority = 1)
     public void doLoinWithValidCred(){
 
@@ -21,9 +21,9 @@ public class agreementPoTestRunner extends setupPage {
     }
     @Test(priority = 2)
 
-    public void agreementPoCreate() throws InterruptedException {
-        agreementPurchaseOrder agreementPurchaseOrder=new agreementPurchaseOrder(driver);
-        agreementPurchaseOrder.agreementPo(driver);
+    public void localCsWithPoCreate() throws InterruptedException {
+        localCsWithPurhaseOrder localCsWithPurhaseOrder=new localCsWithPurhaseOrder(driver);
+        localCsWithPurhaseOrder.localPoWithCs(driver);
         String textActual=driver.findElements(By.className("breadcrumb-item")).get(0).getText();
         Thread.sleep(1000);
         String textExpected="Local Purchase Order";
