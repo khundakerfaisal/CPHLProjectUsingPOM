@@ -111,7 +111,7 @@ public class foreignPurchaseRequisition {
 //        End Requirement for selection
         requirementTypeSelect.click();
         Select requisitionSelect = new Select(requirementTypeSelect);
-        requisitionSelect.selectByVisibleText("Local");
+        requisitionSelect.selectByVisibleText("Foreign");
 //        Thread.sleep(1000);
 //        End requirementTypeSelect selection
         purchase_typeSelect.click();
