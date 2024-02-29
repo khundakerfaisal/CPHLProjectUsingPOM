@@ -13,24 +13,24 @@ public class noteSheetApproval {
 
         WebElement noteSheetPoFinalSubmit = driver.findElement(By.xpath("//button[@title='Save record']"));
         noteSheetPoFinalSubmit.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         // Local po Scm Approval button Pressed
         WebElement noteSheetPoScmApproval = driver.findElement(By.xpath("//button[@name='action_scm_approve']"));
         noteSheetPoScmApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         // Local po Scm Coo Approval button Pressed
         WebElement noteSheetPoCooApproval = driver.findElement(By.xpath("//button[@name='action_coo_approve']"));
         noteSheetPoCooApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         // Local po Confirm Approval button Pressed
         WebElement noteSheetPoMdApproval = driver.findElement(By.xpath("//button[@name='action_md_approve']"));
         noteSheetPoMdApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         WebElement noteSheetPoFinalApproval = driver.findElement(By.xpath("//button[@name='action_done']"));
         noteSheetPoFinalApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
 
 

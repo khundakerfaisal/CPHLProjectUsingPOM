@@ -13,22 +13,22 @@ public class csApproval {
         WebElement csSendToSCMHOD = driver.findElement(By.xpath("//button[@name='action_send_to_scm_hod']"));
         csSendToSCMHOD.click();
 
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         WebElement csSendToCooOPS = driver.findElement(By.xpath("//button[@name='action_send_to_coo_ops']"));
         csSendToCooOPS.click();
 
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         WebElement csSendScmCoo = driver.findElement(By.xpath("//button[@name='action_send_to_scm_coo']"));
         csSendScmCoo.click();
 
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         WebElement csFinalApprover = driver.findElement(By.xpath("//button[@name='action_approve']"));
         csFinalApprover.click();
 
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
     }
 }

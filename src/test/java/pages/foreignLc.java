@@ -28,7 +28,8 @@ public class foreignLc {
     @FindBy(xpath = "//div[@name='partner_id']")
     WebElement foreignLcVendorDropdownSelect;
 
-    @FindBy(xpath = "//a[text()='A-1 Pest Specialist Pte Ltd']")
+    @FindBy(xpath = "//a[text()='A. R. Enterprise']")
+//    @FindBy(xpath = "//a[text()='A-1 Pest Specialist Pte Ltd']")
     WebElement foreignLcVendorValueSelection;
 
 

@@ -14,21 +14,21 @@ public class localPoApproval {
 
         WebElement agreementPoFinalSubmit = driver.findElement(By.xpath("//button[@title='Save record']"));
         agreementPoFinalSubmit.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         // Local po Scm Approval button Pressed
         WebElement LocalPoScmApproval = driver.findElement(By.xpath("//button[@name='send_for_scm_approval']"));
         LocalPoScmApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         // Local po Scm Coo Approval button Pressed
         WebElement LocalPoScmCooApproval = driver.findElement(By.xpath("//button[@name='send_for_scm_coo_approval']"));
         LocalPoScmCooApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         // Local po Confirm Approval button Pressed
         WebElement LocalPoConfirmApproval = driver.findElement(By.xpath("//button[@name='button_confirm']"));
         LocalPoConfirmApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
 
 

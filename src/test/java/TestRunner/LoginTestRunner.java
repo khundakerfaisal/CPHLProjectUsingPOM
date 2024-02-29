@@ -8,7 +8,7 @@ import pages.LoginPage;
 
 
 public class LoginTestRunner extends setupPage {
-    @Test
+    @Test(priority = 1)
     public void doLoinWithValidCred(){
 
         LoginPage loginPage=new LoginPage(driver);

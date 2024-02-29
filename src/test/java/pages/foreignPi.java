@@ -30,9 +30,10 @@ public class foreignPi {
     @FindBy(xpath = "//div[@name='partner_id']")
     WebElement foreignPiVendorDropdownSelect;
 
-    @FindBy(xpath = "//a[text()='A-1 Pest Specialist Pte Ltd']")
+//    @FindBy(xpath = "//a[text()='A-1 Pest Specialist Pte Ltd']")
+//    WebElement foreignPiVendorValueSelection;
+    @FindBy(xpath = "//a[text()='A. R. Enterprise']")
     WebElement foreignPiVendorValueSelection;
-
 
     @FindBy(xpath = "//div[@name='purchase_order_ids']")
     WebElement foreignPiPoSelection;

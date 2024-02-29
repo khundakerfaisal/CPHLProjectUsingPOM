@@ -16,12 +16,12 @@ public class mrrApproval {
         // MRR Review Approval  button Pressed
         WebElement mrrReviewApproval = driver.findElement(By.xpath("//button[@name='button_send_for_mrr_review']"));
         mrrReviewApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         // MRR Final Approval button Pressed
         WebElement mrrFinalApproval = driver.findElement(By.xpath("//button[@name='button_mrr_approve']"));
         mrrFinalApproval.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
 
 
