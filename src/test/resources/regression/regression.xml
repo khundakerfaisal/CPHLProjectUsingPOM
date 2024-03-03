@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<suite name="CPHL-Regression-Testing">
+<suite name="CPHL-Regression-Testing-Foreign-Purchase">
             <test name="CPHL Admin Login">
                 <classes>
             <class name="TestRunner.LoginTestRunner"/>

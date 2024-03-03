@@ -62,14 +62,20 @@ public class agreementPurchaseOrder {
     WebElement agreementPoBudgetValueSelect;
 
 
-    @FindBy(xpath = "//tr[@data-id='purchase.order.line_48']//td[@name='price_unit']")
+    @FindBy(xpath = "//tr[@data-id='purchase.order.line_62']//td[@name='price_unit']")
     WebElement agreementPoFirstRowSelection;
+
+
+
+//    @FindBy(className = "o_data_row")
+//    List<WebElement> agreementPoFirstRowSelection;
 
     @FindBy(xpath = "//td[@name='price_unit']/input")
     WebElement agreementPoFirstPriceInput;
 
-
-    @FindBy(xpath = "//tr[@data-id='purchase.order.line_57']//td[@name='price_unit']")
+//    @FindBy(className = "o_data_row")
+//    List<WebElement> agreementPoSecondRowSelection;
+    @FindBy(xpath = "//tr[@data-id='purchase.order.line_71']//td[@name='price_unit']")
     WebElement agreementPoSecondRowSelection;
     @FindBy(xpath = "//td[@name='price_unit']/input")
     WebElement agreementPoSecondRowPriceInput;
@@ -116,8 +122,8 @@ public class agreementPurchaseOrder {
 
 // Scroll the element into view using JavaScript
         executor.executeScript("arguments[0].scrollIntoView(true);", agreementPoBudgetSelect);
+//        agreementPoFirstRowSelection.click();
         agreementPoFirstRowSelection.click();
-
         agreementPoFirstPriceInput.click();
         agreementPoFirstPriceInput.clear();
         agreementPoFirstPriceInput.sendKeys("600");

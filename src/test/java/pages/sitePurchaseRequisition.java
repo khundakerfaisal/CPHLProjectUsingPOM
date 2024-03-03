@@ -21,8 +21,13 @@ public class sitePurchaseRequisition {
     List<WebElement> btnPrMenu;
     @FindBy(xpath = "//button[@data-original-title='Create record']")
     WebElement btnPrCreate;
-    @FindBy(className = "o_input_dropdown")
-    List<WebElement> budgetDropdownOptions;
+
+
+//    @FindBy(className = "o_input_dropdown")
+//    List<WebElement> budgetDropdownOptions;
+
+    @FindBy(xpath = "//div[@name='budget_line_id']")
+    WebElement budgetDropdownOptions;
 
     @FindBy(className = "ui-menu-item")
     List<WebElement> dropdownBudgetSelection;
@@ -42,18 +47,20 @@ public class sitePurchaseRequisition {
     WebElement requirementTypeSelect;
     @FindBy(name = "purchase_type")
     WebElement purchase_typeSelect;
-    //    @FindBy(name = "assigned_to")
-//    WebElement approveBySelect;
+
     @FindBy(className = "ui-autocomplete-input")
     List<WebElement> approveBySelect;
 
 
     @FindBy(xpath = "//a[text()='Add a line']")
     WebElement productLineSelection;
+    @FindBy(xpath = "//td[@name='product_id']")
+    WebElement productDropdownSelection;
 
 
     @FindBy(className = "o_input_dropdown")
-    List<WebElement> productDropdownSelection;
+    List<WebElement> product2DropdownSelection;
+
 
     @FindBy(xpath = "//a[contains(text(), '1 Gang 1 -Way Switch')]")
     WebElement productDropdownValueSelection;
@@ -64,8 +71,12 @@ public class sitePurchaseRequisition {
     @FindBy(xpath = "//button[text()='Ok']")
     WebElement pressOkButton;
 
-    @FindBy(xpath = "//a[contains(text(), '1 Gang Switch')]")
-    WebElement productDropdown2ndValueSelection;
+
+
+//    @FindBy(xpath = "//td[@name='product_id']")
+//    WebElement product2ndDropdownSelection;
+        @FindBy(xpath = "//a[contains(text(), '1 Gang Switch')]")
+        WebElement productDropdown2ndValueSelection;
 
 
     public sitePurchaseRequisition(WebDriver driver){
@@ -83,7 +94,8 @@ public class sitePurchaseRequisition {
         Thread.sleep(1000);
         //        End procurement Root Menu selection
         //        Budget Select section
-        budgetDropdownOptions.get(0).click();
+//        budgetDropdownOptions.get(0).click();
+        budgetDropdownOptions.click();
         Thread.sleep(1000);
         dropdownBudgetSelection.get(0).click();
         Thread.sleep(1000);
@@ -128,11 +140,13 @@ public class sitePurchaseRequisition {
 // Scroll the element into view using JavaScript
         executor.executeScript("arguments[0].scrollIntoView(true);", productLineSelection);
 
-        productDropdownSelection.get(9).click();
-        Thread.sleep(1000);
+//        productDropdownSelection.get(9).click();
+        productDropdownSelection.click();
+
+        Thread.sleep(2000);
 
         productDropdownValueSelection.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 //        dropdownBudgetSelection.get(2).click();
         productQtyAdding.clear();
         productQtyAdding.sendKeys("5");
@@ -140,21 +154,27 @@ public class sitePurchaseRequisition {
         // Click the "Ok" button
         pressOkButton.click();
         Thread.sleep(2000);
+
+
+//    Second Product selection from PR Table
         JavascriptExecutor executor1 = (JavascriptExecutor) driver;
 
 // Scroll the element into view using JavaScript
         executor1.executeScript("arguments[0].scrollIntoView(true);", productLineSelection);
 //        productQtyAdding.sendKeys(Keys.ENTER);
         productLineSelection.click();
+
+        product2DropdownSelection.get(9).click();
         Thread.sleep(2000);
-        productDropdownSelection.get(9).click();
-        Thread.sleep(1000);
 
         productDropdown2ndValueSelection.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         productQtyAdding.clear();
         productQtyAdding.sendKeys("3");
         pressOkButton.click();
+//        End Second Product selection from PR Table
+
+
         sitePrApproval sitepr=new sitePrApproval(driver);
         sitepr.sitePrApprovalState();
         System.out.println("Site Purchase requisition Successfully Created!");

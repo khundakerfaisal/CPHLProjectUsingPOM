@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="CPHL-Regression-Testing-Site-Purchase">
+    <test name="CPHL Admin Login">
+        <classes>
+            <class name="TestRunner.LoginTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Create New Site PR">
+        <classes>
+            <class name="TestRunner.sitePrTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Create Site Purchase order">
+        <classes>
+            <class name="TestRunner.sitePoTestRunner"/>
+
+        </classes>
+    </test>
+
+
+    <test name="Site QC Created">
+        <classes>
+            <class name="TestRunner.siteQcTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Site MRR Created">
+        <classes>
+            <class name="TestRunner.mrrTestRunner"/>
+
+        </classes>
+    </test>
+
+
+</suite>
