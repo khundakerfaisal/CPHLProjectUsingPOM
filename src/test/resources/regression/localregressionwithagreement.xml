@@ -25,18 +25,18 @@
         </classes>
     </test>
 
-<!--    <test name="Local QC Created">-->
-<!--        <classes>-->
-<!--            <class name="TestRunner.localQcTestRunner"/>-->
+    <test name="Local QC Created">
+        <classes>
+            <class name="TestRunner.localQcTestRunner"/>
 
-<!--        </classes>-->
-<!--    </test>-->
-<!--    <test name="Local MRR Created">-->
-<!--        <classes>-->
-<!--            <class name="TestRunner.mrrTestRunner"/>-->
+        </classes>
+    </test>
+    <test name="Local MRR Created">
+        <classes>
+            <class name="TestRunner.mrrTestRunner"/>
 
-<!--        </classes>-->
-<!--    </test>-->
+        </classes>
+    </test>
 
 
 </suite>
