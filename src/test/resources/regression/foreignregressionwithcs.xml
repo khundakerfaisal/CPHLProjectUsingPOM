@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="CPHL-Regression-Testing-Foreign-Purchase">
+    <test name="CPHL Admin Login">
+        <classes>
+            <class name="TestRunner.LoginTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Create New Foreign PR">
+        <classes>
+            <class name="TestRunner.foreignPrTestRunner"/>
+        </classes>
+    </test>
+    <test name="Create New RFQ">
+        <classes>
+            <class name="TestRunner.rfqTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Create New CS">
+        <classes>
+            <class name="TestRunner.csTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Create Foreign Purchase order">
+        <classes>
+            <class name="TestRunner.foreignPoTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Foreign PI created">
+        <classes>
+            <class name="TestRunner.foreignPiTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Foreign LC Created">
+        <classes>
+            <class name="TestRunner.foreignLcTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Foreign CI Created">
+        <classes>
+            <class name="TestRunner.foreignCiTestRunner"/>
+
+        </classes>
+    </test>
+
+    <test name="Foreign QC Created">
+        <classes>
+            <class name="TestRunner.foreignQcTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Foreign MRR Created">
+        <classes>
+            <class name="TestRunner.mrrTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Foreign Landed Cost Created">
+        <classes>
+            <class name="TestRunner.landedCostTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Foreign MRR Final Approval Created">
+        <classes>
+            <class name="TestRunner.foreignLandedCostMrrTestRunner"/>
+
+        </classes>
+    </test>
+
+</suite>

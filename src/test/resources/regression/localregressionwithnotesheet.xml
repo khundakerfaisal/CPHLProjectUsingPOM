@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="CPHL-Regression-Testing-Local-Purchase-Note sheet-Base">
+    <test name="CPHL Admin Login">
+        <classes>
+            <class name="TestRunner.LoginTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Create New Local PR">
+        <classes>
+            <class name="TestRunner.localPrTestRunner"/>
+        </classes>
+    </test>
+    <test name="Create New RFQ">
+        <classes>
+            <class name="TestRunner.rfqTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Create New Note sheet">
+        <classes>
+            <class name="TestRunner.noteSheetTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Create Local Purchase order">
+        <classes>
+            <class name="TestRunner.localNoteSheetPoTestRunner"/>
+
+        </classes>
+    </test>
+
+
+    <test name="Local QC Created">
+        <classes>
+            <class name="TestRunner.localQcTestRunner"/>
+
+        </classes>
+    </test>
+    <test name="Local MRR Created">
+        <classes>
+            <class name="TestRunner.mrrTestRunner"/>
+
+        </classes>
+    </test>
+
+
+</suite>
