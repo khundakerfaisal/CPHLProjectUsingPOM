@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="CPHL-Regression-Testing-Inventory-Consumed">
+    <test name="CPHL Admin Login">
+        <classes>
+            <class name="TestRunner.LoginTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Create New MR">
+        <classes>
+            <class name="TestRunner.mrTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Create MI">
+        <classes>
+            <class name="TestRunner.miTestRunner"/>
+
+        </classes>
+    </test>
+
+
+</suite>

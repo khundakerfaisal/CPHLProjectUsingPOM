@@ -5,10 +5,10 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
-import pages.MRR;
 import pages.MaterialRequisition;
+import pages.materialIssue;
 
-public class mrTestRunner extends setupPage {
+public class miTestRunner extends setupPage {
     @Test(priority = 1)
     public void doLoinWithValidCred(){
         LoginPage loginPage=new LoginPage(driver);
@@ -21,14 +21,14 @@ public class mrTestRunner extends setupPage {
         Assert.assertTrue(textActual.contains(textExpected));
 
     }
-    @Test(priority = 2,description = "Material Requisition created")
+    @Test(priority = 2,description = "Material Issue created")
 
-    public void NewMrCreate() throws InterruptedException {
-        MaterialRequisition MaterialRequisition=new MaterialRequisition(driver);
-        MaterialRequisition.createMrr(driver);
+    public void NewMiCreate() throws InterruptedException {
+        materialIssue materialIssue=new materialIssue(driver);
+        materialIssue.MiSelection(driver);
         String textActual=driver.findElements(By.className("breadcrumb-item")).get(0).getText();
         Thread.sleep(1000);
-        String textExpected="Material Requisition";
+        String textExpected="Material Issue";
         Assert.assertTrue(textActual.contains(textExpected));
 
 
