@@ -1,13 +1,14 @@
 package pages;
 
-import approval.miApproval;
-import approval.mrrApproval;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class materialIssue {
+import java.util.List;
+
+public class miExternal {
     @FindBy(xpath = "//button[@title=\"Home Menu\"]")
     WebElement btnHomeMenu;
     @FindBy(xpath = "//a[text()='Inventory']")
@@ -19,15 +20,18 @@ public class materialIssue {
     @FindBy(xpath = "//a[text()='Material Issue']")
     WebElement btnMiSubMenu;
 
+    @FindBy(xpath = "//button[@data-original-title='Create record']")
+    WebElement btnExternalMiCreate;
 
+    @FindBy(xpath = "//div[@name='receiver_company_id']")
+    WebElement receiverPlantSelect;
 
-
-    @FindBy(xpath = "//tr[@data-id='material.issue_2']/td[@name=\"name\"][1]")
-    WebElement lastMiSelection;
-    public  materialIssue(WebDriver driver){
+    @FindBy(className = "ui-menu-item")
+    List<WebElement> receiverPlantValueSelection;
+    public  miExternal(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
-    public  void MiSelection(WebDriver driver) throws InterruptedException {
+    public void miExternalCreate(WebDriver driver) throws InterruptedException {
         btnHomeMenu.click();
         Thread.sleep(1000);
         btnInventoryMenu.click();
@@ -37,16 +41,18 @@ public class materialIssue {
         btnMiSubMenu.click();
         Thread.sleep(1000);
 
-        lastMiSelection.click();
+        btnExternalMiCreate.click();
         Thread.sleep(1000);
 
-        miApproval miApproval=new miApproval(driver);
-        miApproval.miApprovalState();
-        Thread.sleep(1000);
-        System.out.println("MI Created successfully");
+        receiverPlantSelect.click();
 
 
+        receiverPlantValueSelection.get(4).click();
+        Thread.sleep(2000);
+//        JavascriptExecutor executor = (JavascriptExecutor) driver;
+//
+//// Scroll the element into view using JavaScript
+//        executor.executeScript("arguments[0].scrollIntoView(true);");
 
     }
-
 }
