@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="CPHL-Regression-Testing-Inventory-External-Issue">
+    <test name="CPHL Admin Login">
+        <classes>
+            <class name="TestRunner.LoginTestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Create New External MI">
+        <classes>
+            <class name="TestRunner.miExternalTestRunner"/>
+        </classes>
+    </test>
+
+</suite>

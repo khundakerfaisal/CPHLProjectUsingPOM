@@ -28,6 +28,29 @@ public class miExternal {
 
     @FindBy(className = "ui-menu-item")
     List<WebElement> receiverPlantValueSelection;
+
+
+    @FindBy(xpath = "//input[@name='loading_master']")
+    WebElement loading_master;
+
+    @FindBy(xpath = "//a[text()='Add a line']")
+    WebElement miProductLineSelection;
+
+    @FindBy(xpath = "//div[@name='product_id']")
+    WebElement miProductDropdownSelection;
+
+    @FindBy(xpath = "//a[contains(text(), 'HFO')]")
+    WebElement miProductDropdownValueSelection;
+
+    @FindBy(xpath = "//input[@name='quantity']")
+    WebElement miProductQtySelection;
+
+
+    @FindBy(xpath = "//button[@title='Save record']")
+    WebElement miSubmitButton;
+
+    @FindBy(xpath = "//button[@name='button_approved']")
+    WebElement miFinalApproveButton;
     public  miExternal(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
@@ -49,10 +72,25 @@ public class miExternal {
 
         receiverPlantValueSelection.get(4).click();
         Thread.sleep(2000);
-//        JavascriptExecutor executor = (JavascriptExecutor) driver;
-//
-//// Scroll the element into view using JavaScript
-//        executor.executeScript("arguments[0].scrollIntoView(true);");
+
+        loading_master.click();
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+
+// Scroll the element into view using JavaScript
+        executor.executeScript("arguments[0].scrollIntoView(true);",loading_master);
+
+        miProductLineSelection.click();
+        Thread.sleep(1000);
+        miProductDropdownSelection.click();
+        miProductDropdownValueSelection.click();
+        Thread.sleep(2000);
+        miProductQtySelection.clear();
+        miProductQtySelection.sendKeys("4.500");
+        miSubmitButton.click();
+        Thread.sleep(2000);
+        miFinalApproveButton.click();
+        Thread.sleep(2000);
+        System.out.println("External MI Created successfully");
 
     }
 }

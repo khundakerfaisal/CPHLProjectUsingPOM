@@ -24,6 +24,6 @@ public class setupPage {
     }
     @AfterTest
     public void closeBrowser(){
-//        driver.quit();
+        driver.quit();
     }
 }
