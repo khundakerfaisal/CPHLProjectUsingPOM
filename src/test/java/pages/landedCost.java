@@ -43,7 +43,7 @@ public class landedCost {
     WebElement commercialApprovalSelect;
 
 
-    @FindBy(xpath = "//a[text()='Approver']")
+    @FindBy(xpath = "//a[text()='Ashraful H Bhuiya']")
     WebElement commercialApprovalValueSelect;
 
 //    @FindBy(className = "ui-menu-item")

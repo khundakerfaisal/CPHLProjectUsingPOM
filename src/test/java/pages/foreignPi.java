@@ -38,7 +38,7 @@ public class foreignPi {
     @FindBy(xpath = "//div[@name='purchase_order_ids']")
     WebElement foreignPiPoSelection;
 
-    @FindBy(xpath = "//ul[@id='ui-id-5']/li[1]/a")
+    @FindBy(xpath = "//ul[@id='ui-id-6']/li[1]/a")
     WebElement foreignPiPoValueSelection;
 
     @FindBy(xpath = "//div[@name='currency_id']")

@@ -36,7 +36,7 @@ public class foreignLc {
     @FindBy(xpath = "//div[@name='proforma_invoice_ids']")
     WebElement foreignLcSelection;
 
-    @FindBy(xpath = "//ul[@id='ui-id-5']/li[1]/a")
+    @FindBy(xpath = "//ul[@id='ui-id-6']/li[1]/a")
     WebElement foreignLcValueSelection;
 
 
