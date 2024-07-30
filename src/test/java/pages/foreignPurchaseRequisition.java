@@ -15,6 +15,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class foreignPurchaseRequisition {
+//    @FindBy(className = ".dropdown-toggle")
+//    List<WebElement> btnCompanyDropdown;
+//
+//    @FindBy(className = ".dropdown-item.p-0.bg-white")
+//    List<WebElement> selectCompany;
+
 
     @FindBy(xpath = "//button[@title=\"Home Menu\"]")
     WebElement btnHomeMenu;
@@ -80,6 +86,10 @@ public class foreignPurchaseRequisition {
 
         btnPrMenu.get(5).click();
         Thread.sleep(1000);
+//        btnCompanyDropdown.get(8).click();
+//        Thread.sleep(1000);
+//        selectCompany.get(5).click();
+//        Thread.sleep(1000);
         btnPrCreate.click();
         Thread.sleep(1000);
         //        End procurement Root Menu selection
