@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class LoginPage {
+
     @FindBy(name = "login")
     WebElement txtUserName;
 

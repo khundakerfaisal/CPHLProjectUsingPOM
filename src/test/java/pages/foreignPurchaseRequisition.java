@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class foreignPurchaseRequisition {
-//    @FindBy(className = ".dropdown-toggle")
+//    @FindBy(className = ".oe_topbar_name")
 //    List<WebElement> btnCompanyDropdown;
 //
 //    @FindBy(className = ".dropdown-item.p-0.bg-white")
@@ -82,14 +82,17 @@ public class foreignPurchaseRequisition {
 
     public void foreignPr(WebDriver driver) throws InterruptedException {
 
+
         btnHomeMenu.click();
 
         btnPrMenu.get(5).click();
         Thread.sleep(1000);
-//        btnCompanyDropdown.get(8).click();
+
+//        btnCompanyDropdown.get(0).click();
 //        Thread.sleep(1000);
 //        selectCompany.get(5).click();
 //        Thread.sleep(1000);
+
         btnPrCreate.click();
         Thread.sleep(1000);
         //        End procurement Root Menu selection
