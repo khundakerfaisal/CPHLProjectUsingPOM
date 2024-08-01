@@ -16,7 +16,7 @@ public class foreignPrTestRunner extends setupPage {
         String adminUser=System.getProperty("username");
         String adminPass=System.getProperty("password");
         loginPage.doLogin(adminUser,adminPass);
-//        loginPage.doLogin("Live_Data_Migration","1234");
+//        loginPage.doLogin("Live_Data_Migration","@!livemigrate1234#");
         String textActual=driver.findElement(By.xpath("//span[@id='ks_dashboard_title_label']")).getText();
         String textExpected="My Dashboard";
         Assert.assertTrue(textActual.contains(textExpected));

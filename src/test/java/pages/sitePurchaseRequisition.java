@@ -15,6 +15,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class sitePurchaseRequisition {
+    @FindBy(className = "o_switch_company_menu")
+    List<WebElement> btnCompanyDropdown;
+
+    @FindBy(xpath = "//div[@role='menu']/span/div[@data-company-id='6']")
+    WebElement selectCompany;
     @FindBy(xpath = "//button[@title=\"Home Menu\"]")
     WebElement btnHomeMenu;
     @FindBy(className = "dropdown-item")
@@ -90,6 +95,14 @@ public class sitePurchaseRequisition {
 
         btnPrMenu.get(5).click();
         Thread.sleep(1000);
+
+        //Company dropdown selection for PR
+        btnCompanyDropdown.get(0).click();
+        Thread.sleep(1000);
+        selectCompany.click();
+        Thread.sleep(1000);
+        //End Company dropdown selection for PR
+
         btnPrCreate.click();
         Thread.sleep(1000);
         //        End procurement Root Menu selection

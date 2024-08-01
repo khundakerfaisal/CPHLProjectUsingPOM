@@ -15,12 +15,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class foreignPurchaseRequisition {
-//    @FindBy(className = ".oe_topbar_name")
-//    List<WebElement> btnCompanyDropdown;
-//
-//    @FindBy(className = ".dropdown-item.p-0.bg-white")
-//    List<WebElement> selectCompany;
+    @FindBy(className = "o_switch_company_menu")
+    List<WebElement> btnCompanyDropdown;
 
+    @FindBy(xpath = "//div[@role='menu']/span/div[@data-company-id='6']")
+    WebElement selectCompany;
 
     @FindBy(xpath = "//button[@title=\"Home Menu\"]")
     WebElement btnHomeMenu;
@@ -43,14 +42,12 @@ public class foreignPurchaseRequisition {
     @FindBy(name = "requirement_for")
     WebElement requirement_forSelect;
 
-
-
     @FindBy(name = "requisition_type")
     WebElement requirementTypeSelect;
     @FindBy(name = "purchase_type")
     WebElement purchase_typeSelect;
     //    @FindBy(name = "assigned_to")
-//    WebElement approveBySelect;
+    //    WebElement approveBySelect;
     @FindBy(className = "ui-autocomplete-input")
     List<WebElement> approveBySelect;
 
@@ -87,12 +84,12 @@ public class foreignPurchaseRequisition {
 
         btnPrMenu.get(5).click();
         Thread.sleep(1000);
-
-//        btnCompanyDropdown.get(0).click();
-//        Thread.sleep(1000);
-//        selectCompany.get(5).click();
-//        Thread.sleep(1000);
-
+//Company dropdown selection for PR
+        btnCompanyDropdown.get(0).click();
+        Thread.sleep(1000);
+        selectCompany.click();
+        Thread.sleep(1000);
+//End Company dropdown selection for PR
         btnPrCreate.click();
         Thread.sleep(1000);
         //        End procurement Root Menu selection
